@@ -1,0 +1,2 @@
+ngx_http_opentracing_module.so
+libdd_opentracing_plugin.so

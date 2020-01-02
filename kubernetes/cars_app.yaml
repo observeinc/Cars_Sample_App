@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: web-server
-        image: tombatchelor/cars_web:3.0
+        image: tombatchelor/cars_web:3.1
         imagePullPolicy: Always
         ports:
         - name: cars-web-port
@@ -45,7 +45,7 @@ spec:
     spec:
       containers:
       - name: app-server
-        image:  tombatchelor/cars:3.1-leak
+        image:  tombatchelor/cars:3.2-leak
         imagePullPolicy: Always
         ports:
         - name: cars-app-port

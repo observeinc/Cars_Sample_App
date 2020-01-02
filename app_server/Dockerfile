@@ -24,5 +24,10 @@ COPY target/Cars_Sample_App/WEB-INF/lib/slf4j-api-1.7.25.jar /usr/local/tomcat/l
 COPY target/Cars_Sample_App/WEB-INF/lib/fst-2.57.jar /usr/local/tomcat/lib/
 COPY target/Cars_Sample_App/WEB-INF/lib/objenesis-2.5.1.jar /usr/local/tomcat/lib/
 
+# Adding in DD Java Agent
+COPY dd-java-agent.jar /
+
 # This set is the leak short circuits to no-op or not, if TRUE leak occures
 ENV LEAKING=TRUE
+
+ENV JAVA_OPTS="-javaagent:/dd-java-agent.jar -Ddd.trace.agent.port=4541 -Ddd.agent.host=msgpack"

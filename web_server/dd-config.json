@@ -1,0 +1,6 @@
+{
+  "service": "nginx",
+  "operation_name_override": "nginx.handle",
+  "agent_host": "msgpack",
+  "agent_port": 4541
+}
